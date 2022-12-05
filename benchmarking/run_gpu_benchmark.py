@@ -45,6 +45,7 @@ import scipy.signal  # pylint: disable=unused-import
 
 from alphatensor.benchmarking import factorizations
 from alphatensor.benchmarking import utils
+import jax.profiler
 
 
 def main():
@@ -76,12 +77,16 @@ def main():
     print(f'Multiplying {s} x {s} matrices')
     print('='*40)
     results_dot = utils.benchmark_jnp_dot((s, s, s), num_trials=num_trials)
+    jax.profiler.save_device_memory_profile(f"dot{s}.prof")
+    print('jnp.dot: %0.2f ms' % np.median(results_dot))
 
     for algorithm_name, factorization in factorized_algorithms:
       if algorithm_name == 'AlphaTensor TPU-optimized' and s > 19000:
         continue  # This TPU-optimized algorithm runs OOM on a V100 GPU.
       results_algorithm = utils.benchmark_factorized_algorithm(
           factorization, (s, s, s), num_trials=num_trials)
+      jax.profiler.save_device_memory_profile(f"{algorithm_name}{s}.prof")
+      print('%s: %0.2f ms' % (algorithm_name, np.median(results_algorithm)))
       ratio = np.median(results_dot / results_algorithm)
       improvement = 100 * ratio - 100
       print('%s vs `jnp.dot`: %0.2f%% speedup' % (algorithm_name, improvement))
