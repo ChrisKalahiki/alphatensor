@@ -45,7 +45,7 @@ import scipy.signal  # pylint: disable=unused-import
 
 from alphatensor.benchmarking import factorizations
 from alphatensor.benchmarking import utils
-# import jax.profiler
+import jax.profiler
 
 
 def main():
@@ -92,6 +92,7 @@ def main():
       print('%s vs `jnp.dot`: %0.5f%% speedup' % (algorithm_name, improvement))
 
     print('\n\n')
+    jax.profiler.save_device_memory_profile(f"gpu_bench.prof")
 
 
 if __name__ == '__main__':
