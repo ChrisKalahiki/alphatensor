@@ -1,0 +1,121 @@
+/home/ckalahi
+Starting run...
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+Fixing GPU clock frequency to 1530 to reduce benchmarking variance...
+Done.
+Multiplying 8192 x 8192 matrices
+========================================
+jnp.dot: 0.0817951152 ms
+Strassen^2: 0.0819439626 ms
+Strassen^2 vs `jnp.dot`: -0.15235% speedup
+AlphaTensor GPU-optimized: 0.0789454787 ms
+AlphaTensor GPU-optimized vs `jnp.dot`: 3.61899% speedup
+AlphaTensor TPU-optimized: 0.0824897816 ms
+AlphaTensor TPU-optimized vs `jnp.dot`: -0.75858% speedup
+
+
+
+Multiplying 10240 x 10240 matrices
+========================================
+jnp.dot: 0.1681258756 ms
+Strassen^2: 0.1570213327 ms
+Strassen^2 vs `jnp.dot`: 7.04707% speedup
+AlphaTensor GPU-optimized: 0.1521448841 ms
+AlphaTensor GPU-optimized vs `jnp.dot`: 10.53224% speedup
+AlphaTensor TPU-optimized: 0.1575034028 ms
+AlphaTensor TPU-optimized vs `jnp.dot`: 6.73631% speedup
+
+
+
+Multiplying 12288 x 12288 matrices
+========================================
+jnp.dot: 0.2768874207 ms
+Strassen^2: 0.2564828885 ms
+Strassen^2 vs `jnp.dot`: 7.90549% speedup
+AlphaTensor GPU-optimized: 0.2501893021 ms
+AlphaTensor GPU-optimized vs `jnp.dot`: 10.72190% speedup
+AlphaTensor TPU-optimized: 0.2570674392 ms
+AlphaTensor TPU-optimized vs `jnp.dot`: 7.69459% speedup
+
+
+
+Multiplying 14336 x 14336 matrices
+========================================
+jnp.dot: 0.4415220922 ms
+Strassen^2: 0.3761829600 ms
+Strassen^2 vs `jnp.dot`: 17.37064% speedup
+AlphaTensor GPU-optimized: 0.3661431635 ms
+AlphaTensor GPU-optimized vs `jnp.dot`: 20.60103% speedup
+AlphaTensor TPU-optimized: 0.3773270670 ms
+AlphaTensor TPU-optimized vs `jnp.dot`: 17.03152% speedup
+
+
+
+Multiplying 16384 x 16384 matrices
+========================================
+jnp.dot: 0.6597146199 ms
+Strassen^2: 0.5754585403 ms
+Strassen^2 vs `jnp.dot`: 14.63343% speedup
+AlphaTensor GPU-optimized: 0.5632144584 ms
+AlphaTensor GPU-optimized vs `jnp.dot`: 17.13574% speedup
+AlphaTensor TPU-optimized: 0.5766675547 ms
+AlphaTensor TPU-optimized vs `jnp.dot`: 14.41835% speedup
+
+
+
+Multiplying 18432 x 18432 matrices
+========================================
+jnp.dot: 0.9351166417 ms
+Strassen^2: 0.8132031630 ms
+Strassen^2 vs `jnp.dot`: 14.99109% speedup
+AlphaTensor GPU-optimized: 0.7974588971 ms
+AlphaTensor GPU-optimized vs `jnp.dot`: 17.26729% speedup
+AlphaTensor TPU-optimized: 0.8142826523 ms
+AlphaTensor TPU-optimized vs `jnp.dot`: 14.82218% speedup
+
+
+
+Multiplying 20480 x 20480 matrices
+========================================
+jnp.dot: 1.2790281161 ms
+Strassen^2: 1.0504685513 ms
+Strassen^2 vs `jnp.dot`: 21.78291% speedup
+AlphaTensor GPU-optimized: 1.0350036670 ms
+AlphaTensor GPU-optimized vs `jnp.dot`: 23.57372% speedup
+
+
+
+waiting for runs to finish
+ 
+ 
++------------------------------------------+ 
+| PALMETTO CLUSTER PBS RESOURCES REQUESTED | 
++------------------------------------------+ 
+ 
+mem=20gb,walltime=12:00:00,ncpus=16
+ 
+ 
++-------------------------------------+ 
+| PALMETTO CLUSTER PBS RESOURCES USED | 
++-------------------------------------+ 
+ 
+cput=00:14:10,mem=15148720kb,walltime=01:32:09,ncpus=16,cpupercent=15,vmem=40737708kb
+ 
+ 
