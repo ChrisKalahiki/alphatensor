@@ -188,7 +188,7 @@ def _get_factorization_op(factors: np.ndarray,
     for _ in range(n_repeat):
       c = jitted_algorithm(a, c)
     c[0][0].block_until_ready()
-
+  jax.profiler.dave_device_memory_profile('single.prof')
   return _jitted_algorithm_timing
 
 
