@@ -19,3 +19,6 @@ This will let you see a visualization of the memory profiling. You can also run:
 pprof -top <path to .prof file>
 ```
 This will give you a text report iof the profile, sorted by hotness.
+
+### Note:
+This repository contains all of the working code from my project. I chose not to include the code I had attempted to translate to C++ or scripts where I attempted to overwrite the memory allocation done in JAX to aboid needless clutter. At the end of the day, those scripts didn't run. I instead included all of the code I that I had working for benchmarking the working algorithms and exploring their memory usage/allocation wiht pprof. The charts in my report were generated with numbers from pprof as well as timing that will be included in the output of the job script for Palmetto. If you have further questions, please feel free to reach out to me at ckalahi@clemson.edu.
